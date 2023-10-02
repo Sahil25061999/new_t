@@ -1,0 +1,32 @@
+.dots {
+
+  height: 8px;
+  aspect-ratio: 1;
+  background-color: black;
+  border-radius: 2rem;
+  animation: 1.5s ease infinite loading;
+  transistion:.5s;
+  transform:scale(0);
+}
+
+.dots:first-child{
+  animation-delay:0s
+}
+.dots:nth-child(2){
+  animation-delay:.2s
+}
+.dots:last-child{
+  animation-delay:.4s
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(1)
+  }
+  100% {
+    transform: scale(0)
+  }
+  /*100% {
+    transform: translateY(50%)
+  }*/
+}

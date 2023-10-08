@@ -1,6 +1,6 @@
 import React from "react";
-import "./styles.css";
-export default function LoadingButton() {
+import "./style.css";
+export const  LoadingButton = ()=> {
   return (
     <div className="flex gap-1">
       <span className="dots"></span>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import LoadingButton from "@/components/LoadingButton/LoadingButton";
+import { LoadingButton } from "@/components/index.component";
 export default function SignupPage() {
   const [userDetails, setUserDetails] = useState({
     username: "",
@@ -53,7 +53,7 @@ export default function SignupPage() {
           <div className=" h-full flex flex-col justify-center items-center">
             <div>
               <label
-                className="block text-xs text-neutral-200"
+                className="block text-sm text-neutral-200"
                 htmlFor="username"
               >
                 Username
@@ -72,7 +72,7 @@ export default function SignupPage() {
               />
             </div>
             <div className=" mt-6">
-              <label className="block text-xs text-neutral-200" htmlFor="email">
+              <label className="block text-sm text-neutral-200" htmlFor="email">
                 Email
               </label>
               <input
@@ -87,7 +87,7 @@ export default function SignupPage() {
             </div>
             <div className=" mt-6">
               <label
-                className="block text-xs text-neutral-200"
+                className="block text-sm text-neutral-200"
                 htmlFor="password"
               >
                 password
@@ -115,7 +115,7 @@ export default function SignupPage() {
             </div>
           </div>
           <div className=" p-4">
-            <p className="text-xs text-neutral-400">
+            <p className=" text-sm text-neutral-400">
               Already have an account?{" "}
               <Link className="text-neutral-200" href={"/login"}>
                 Login

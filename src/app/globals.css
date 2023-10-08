@@ -13,15 +13,37 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-    --background-rgb:5,5,5;
+    --background-rgb: 5, 5, 5;
+    --gap: 1rem;
   }
+}
+
+img {
+  object-fit: cover;
+  min-width: 100%;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background-color: rgb(var(--background-rgb));
+  padding-block: 1.5rem;
 }
 
-.hero__section{
+.product__section {
+  width: calc(98% - var(--gap));
+  margin-inline: auto;
+  column-gap: var(--gap);
+}
+.product__section > div {
+  height: fit-content;
+  margin-bottom: var(--gap);
+  border-radius: 0rem;
+  overflow: hidden;
+  margin-inline:auto;
+}
 
+.product__section > div > img {
+  object-fit: cover;
+  min-width: 100%;
+  /* width: 250px; */
 }

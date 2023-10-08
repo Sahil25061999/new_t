@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./style.css";
-export default function Welcome() {
+import styles from "./style.module.css";
+export const Welcome = () => {
   const [profile, setProfile] = useState({
     username: "",
   });
@@ -24,11 +24,9 @@ export default function Welcome() {
   }, []);
   return (
     <div
-      className={`${
-        dataLoaded ? "welcome__page" : ""
-      } h-screen w-full flex justify-center items-center absolute top-0 left-0 z-50`}
+      className={`${styles.welcome__page} pointer-events-none h-screen w-full flex justify-center items-center absolute top-0 left-0 z-50 `}
     >
-      {"Welcome "+profile?.username}
+      Welcome<span className=" ml-2 text-rose-600">{profile?.username}</span>
     </div>
   );
-}
+};

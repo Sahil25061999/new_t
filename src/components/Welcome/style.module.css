@@ -1,0 +1,16 @@
+.welcome__page{
+  background-color: rgb(var(--background-rgb));
+  animation: 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) transitionY forwards;
+  animation-delay:1s;
+}
+
+@keyframes transitionY{
+  0%{
+    /* transform:translateY(0); */
+    opacity:1
+  }
+  100%{
+    opacity:0
+    /* transform:translateY(-100%); */
+  }
+}

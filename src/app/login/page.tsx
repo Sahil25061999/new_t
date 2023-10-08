@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import LoadingButton from "@/components/LoadingButton/LoadingButton";
+import { LoadingButton } from "@/components/index.component";
 export default function LoginPage() {
   const [userDetails, setUserDetails] = useState({
     email: "",
@@ -91,7 +91,7 @@ export default function LoginPage() {
             </div>
           </div>
           <div className=" p-4">
-            <p className="text-xs text-neutral-400">
+            <p className=" text-sm text-neutral-400">
               Already have an account?{" "}
               <Link className="text-neutral-200" href={"/signup"}>
                 Signup

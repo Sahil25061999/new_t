@@ -1,7 +1,7 @@
 import { getUserDetails } from "@/helpers/getUserDetails";
 import { NextRequest, NextResponse } from "next/server";
-import { User } from "@/db/models/users";
-import { connect } from "@/db/config";
+import { User } from "@/backend/db/models/users";
+import { connect } from "@/backend/db/config";
 
 connect();
 export async function GET (request: NextRequest) {
